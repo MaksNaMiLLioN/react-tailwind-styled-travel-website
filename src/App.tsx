@@ -9,6 +9,7 @@ const AppContainer = tw.div`
   flex
   w-full
   h-full
+  overflow-hidden
 `
 
 function App() {
