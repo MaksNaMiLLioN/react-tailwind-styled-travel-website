@@ -138,7 +138,7 @@ export function TopSection() {
                     </DescriptionText>
                 </InfoSection>
                 <ViewMoreButton>
-                    <Link to="Explore" smooth={"easeInOutQuad"} duration={1500}>
+                    <Link to="Explore" smooth={"easeInOutQuad"} duration={1000}>
                         <BsArrowDownCircle/>
                     </Link>
                 </ViewMoreButton>
