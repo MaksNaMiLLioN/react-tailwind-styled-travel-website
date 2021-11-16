@@ -2,6 +2,15 @@ import react from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import {Element} from 'react-scroll';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+//Images
+import BaliTempleImg from "../../images/bali-temple.jpg";
+import RiceTerraceImg from "../../images/rice-terrace.jpg";
+import ExoticBromoImg from "../../images/exotic-bromo.jpg";
+import MaleMaldivesImg from "../../images/male-maldives.jpg";
+import IceTeaImg from "../../images/ice-tea.jpg";
 
 const ExploreSectionContainer = tw(Element)`
     w-full
@@ -49,8 +58,8 @@ const ExploreSectionWrapper = tw.div`
     xl:mt-6
     2xl:mt-10
     max-w-sm
-    xl:max-w-3xl
-    2xl:max-w-5xl
+    xl:max-w-2xl
+    2xl:max-w-4xl
 `;
 
 const Item = styled.div`
@@ -91,6 +100,31 @@ export function ExploreSection(){
                 journey to the beautiful of Indonesia, exploring so many historical and amazing 
                 locations with the group and having so much fun.
             </SectionInfo>
+
+            <ExploreSectionWrapper>
+                <Carousel dynamicHeight={false}>
+                    <Item>
+                        <img src={BaliTempleImg}/>
+                        <Description>Bali Temple</Description>
+                    </Item>
+                    <Item>
+                        <img src={RiceTerraceImg}/>
+                        <Description>Rice Terrace</Description>
+                    </Item>
+                    <Item>
+                        <img src={ExoticBromoImg}/>
+                        <Description>Exotic Bromo</Description>
+                    </Item>
+                    <Item>
+                        <img src={MaleMaldivesImg}/>
+                        <Description>Male Maldives</Description>
+                    </Item>
+                    <Item>
+                        <img src={IceTeaImg}/>
+                        <Description>Ice Tea</Description>
+                    </Item>
+                </Carousel>
+            </ExploreSectionWrapper>
         </ExploreSectionContainer>
     )
 }
